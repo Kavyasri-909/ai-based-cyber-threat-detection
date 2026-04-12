@@ -21,3 +21,12 @@ This project simulates a real-world cybersecurity threat detection system using 
 pip install -r requirements.txt
 python main.py
 streamlit run dashboard/app.py
+git clone <repo>
+cd project
+pip install -r requirements.txt
+python main.py
+## Results
+
+- Successfully detects obstacles in real-time
+- Navigation accuracy: XX%
+- Response time: XX ms
