@@ -16,5 +16,4 @@ This project uses Machine Learning to detect cyber threats from network traffic 
 - Pandas
 - Scikit-learn
 - Streamlit
-
-## 📂 Project Structure
+[output]: image.png
