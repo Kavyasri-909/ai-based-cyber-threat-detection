@@ -3,6 +3,11 @@ from src.features import split_features
 from src.train_model import train
 from src.detect import load_model, predict
 from src.alert import send_alert
+from src.alert_system import log_alert
+
+result = detect_threat(model, sample)
+
+log_alert(result)
 
 # -----------------------------
 # STEP 1: Load Data

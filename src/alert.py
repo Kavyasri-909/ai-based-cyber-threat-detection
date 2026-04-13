@@ -1,12 +1,19 @@
 import json
 from datetime import datetime
 
-def send_alert(status):
+def log_alert(prediction):
     alert = {
-        "time": str(datetime.now()),
-        "status": status
+        "timestamp": str(datetime.now()),
+        "prediction": prediction
     }
 
-    with open("outputs/alerts.json", "a") as f:
-        json.dump(alert, f)
-        f.write("\n")
+    try:
+        with open("outputs/alerts.json", "r") as f:
+            data = json.load(f)
+    except:
+        data = []
+
+    data.append(alert)
+
+    with open("outputs/alerts.json", "w") as f:
+        json.dump(data, f, indent=4)
